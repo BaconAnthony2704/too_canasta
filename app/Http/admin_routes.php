@@ -70,4 +70,40 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::get(config('laraadmin.adminRoute') . '/backup_dt_ajax', 'LA\BackupsController@dtajax');
 	Route::post(config('laraadmin.adminRoute') . '/create_backup_ajax', 'LA\BackupsController@create_backup_ajax');
 	Route::get(config('laraadmin.adminRoute') . '/downloadBackup/{id}', 'LA\BackupsController@downloadBackup');
+
+	/* ================== Lugars ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/lugars', 'LA\LugarsController');
+	Route::get(config('laraadmin.adminRoute') . '/lugar_dt_ajax', 'LA\LugarsController@dtajax');
+
+	/* ================== Municipios ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/municipios', 'LA\MunicipiosController');
+	Route::get(config('laraadmin.adminRoute') . '/municipio_dt_ajax', 'LA\MunicipiosController@dtajax');
+
+	/* ================== Departamentos ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/departamentos', 'LA\DepartamentosController');
+	Route::get(config('laraadmin.adminRoute') . '/departamento_dt_ajax', 'LA\DepartamentosController@dtajax');
+
+	/* ================== Canasta_basicas ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/canasta_basicas', 'LA\Canasta_basicasController');
+	Route::get(config('laraadmin.adminRoute') . '/canasta_basica_dt_ajax', 'LA\Canasta_basicasController@dtajax');
+
+	/* ================== Unidad_de_Medidas ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/unidad_de_medidas', 'LA\Unidad_de_MedidasController');
+	Route::get(config('laraadmin.adminRoute') . '/unidad_de_medida_dt_ajax', 'LA\Unidad_de_MedidasController@dtajax');
+
+	/* ================== Productos ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/productos', 'LA\ProductosController');
+	Route::get(config('laraadmin.adminRoute') . '/producto_dt_ajax', 'LA\ProductosController@dtajax');
+
+	/* ================== Marcas ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/marcas', 'LA\MarcasController');
+	Route::get(config('laraadmin.adminRoute') . '/marca_dt_ajax', 'LA\MarcasController@dtajax');
+
+	/* ================== Categorias ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/categorias', 'LA\CategoriasController');
+	Route::get(config('laraadmin.adminRoute') . '/categoria_dt_ajax', 'LA\CategoriasController@dtajax');
+
+	/* ================== Precios ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/precios', 'LA\PreciosController');
+	Route::get(config('laraadmin.adminRoute') . '/precio_dt_ajax', 'LA\PreciosController@dtajax');
 });
