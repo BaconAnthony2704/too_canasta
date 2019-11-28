@@ -22,8 +22,8 @@ use App\Models\Producto;
 class ProductosController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'NmbreProducto';
-	public $listing_cols = ['id', 'NmbreProducto', 'cantidad', 'unidadmedida', 'departamento', 'marca'];
+	public $view_col = 'cantidadProducto';
+	public $listing_cols = ['id', 'nombreProducto', 'precioProducto', 'precio', 'cantidadProducto', 'unidadmedida'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

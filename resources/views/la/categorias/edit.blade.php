@@ -34,8 +34,7 @@
 					
 					{{--
 					@la_input($module, 'nombreCat')
-					@la_input($module, 'tipocategoria')
-					@la_input($module, 'producto')
+					@la_input($module, 'marca')
 					--}}
                     <br>
 					<div class="form-group">

@@ -22,8 +22,8 @@ use App\Models\Municipio;
 class MunicipiosController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'nombremunicipio';
-	public $listing_cols = ['id', 'nombremunicipio', 'departamento'];
+	public $view_col = 'lugar';
+	public $listing_cols = ['id', 'nombreMunicipio', 'lugar'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

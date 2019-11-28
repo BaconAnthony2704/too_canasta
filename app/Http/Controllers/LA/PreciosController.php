@@ -22,8 +22,8 @@ use App\Models\Precio;
 class PreciosController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'normal';
-	public $listing_cols = ['id', 'mayor', 'descuento', 'normal', 'menor'];
+	public $view_col = 'mayor';
+	public $listing_cols = ['id', 'mayor', 'menor', 'normal', 'descuento'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

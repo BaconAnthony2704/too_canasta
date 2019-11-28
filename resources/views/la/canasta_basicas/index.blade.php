@@ -1,14 +1,14 @@
 @extends("la.layouts.app")
 
-@section("contentheader_title", "Canasta basicas")
-@section("contentheader_description", "Canasta basicas listing")
-@section("section", "Canasta basicas")
+@section("contentheader_title", "Canasta Basicas")
+@section("contentheader_description", "Canasta Basicas listing")
+@section("section", "Canasta Basicas")
 @section("sub_section", "Listing")
-@section("htmlheader_title", "Canasta basicas Listing")
+@section("htmlheader_title", "Canasta Basicas Listing")
 
 @section("headerElems")
-@la_access("Canasta_basicas", "create")
-	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Canasta basica</button>
+@la_access("Canasta_Basicas", "create")
+	<button class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#AddModal">Add Canasta Basica</button>
 @endla_access
 @endsection
 
@@ -45,24 +45,21 @@
 	</div>
 </div>
 
-@la_access("Canasta_basicas", "create")
+@la_access("Canasta_Basicas", "create")
 <div class="modal fade" id="AddModal" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Add Canasta basica</h4>
+				<h4 class="modal-title" id="myModalLabel">Add Canasta Basica</h4>
 			</div>
-			{!! Form::open(['action' => 'LA\Canasta_basicasController@store', 'id' => 'canasta_basica-add-form']) !!}
+			{!! Form::open(['action' => 'LA\Canasta_BasicasController@store', 'id' => 'canasta_basica-add-form']) !!}
 			<div class="modal-body">
 				<div class="box-body">
                     @la_form($module)
 					
 					{{--
-					@la_input($module, 'pais')
-					@la_input($module, 'fecha')
-					@la_input($module, 'departamento')
-					@la_input($module, 'categoria')
+					@la_input($module, 'nombreCanasta')
 					--}}
 				</div>
 			</div>

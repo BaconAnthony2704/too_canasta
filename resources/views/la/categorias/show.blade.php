@@ -108,8 +108,7 @@
 					</div>
 					<div class="panel-body">
 						@la_display($module, 'nombreCat')
-						@la_display($module, 'tipocategoria')
-						@la_display($module, 'producto')
+						@la_display($module, 'marca')
 					</div>
 				</div>
 			</div>

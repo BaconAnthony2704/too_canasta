@@ -1,14 +1,14 @@
 @extends("la.layouts.app")
 
 @section("contentheader_title")
-	<a href="{{ url(config('laraadmin.adminRoute') . '/canasta_basicas') }}">Canasta basica</a> :
+	<a href="{{ url(config('laraadmin.adminRoute') . '/canasta_basicas') }}">Canasta Basica</a> :
 @endsection
 @section("contentheader_description", $canasta_basica->$view_col)
-@section("section", "Canasta basicas")
+@section("section", "Canasta Basicas")
 @section("section_url", url(config('laraadmin.adminRoute') . '/canasta_basicas'))
 @section("sub_section", "Edit")
 
-@section("htmlheader_title", "Canasta basicas Edit : ".$canasta_basica->$view_col)
+@section("htmlheader_title", "Canasta Basicas Edit : ".$canasta_basica->$view_col)
 
 @section("main-content")
 
@@ -33,10 +33,7 @@
 					@la_form($module)
 					
 					{{--
-					@la_input($module, 'pais')
-					@la_input($module, 'fecha')
-					@la_input($module, 'departamento')
-					@la_input($module, 'categoria')
+					@la_input($module, 'nombreCanasta')
 					--}}
                     <br>
 					<div class="form-group">

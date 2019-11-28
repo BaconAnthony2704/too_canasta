@@ -22,8 +22,8 @@ use App\Models\Lugar;
 class LugarsController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'nombrelugar';
-	public $listing_cols = ['id', 'nombrelugar', 'municipio'];
+	public $view_col = 'nombreLugar';
+	public $listing_cols = ['id', 'nombreLugar'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

@@ -59,11 +59,11 @@
                     @la_form($module)
 					
 					{{--
-					@la_input($module, 'NmbreProducto')
-					@la_input($module, 'cantidad')
+					@la_input($module, 'nombreProducto')
+					@la_input($module, 'precioProducto')
+					@la_input($module, 'precio')
+					@la_input($module, 'cantidadProducto')
 					@la_input($module, 'unidadmedida')
-					@la_input($module, 'departamento')
-					@la_input($module, 'marca')
 					--}}
 				</div>
 			</div>

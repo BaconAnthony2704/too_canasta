@@ -33,8 +33,8 @@
 					@la_form($module)
 					
 					{{--
-					@la_input($module, 'nombremarca')
-					@la_input($module, 'precio')
+					@la_input($module, 'nombreMarca')
+					@la_input($module, 'producto')
 					--}}
                     <br>
 					<div class="form-group">

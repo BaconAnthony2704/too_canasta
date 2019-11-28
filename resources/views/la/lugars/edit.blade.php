@@ -33,8 +33,7 @@
 					@la_form($module)
 					
 					{{--
-					@la_input($module, 'nombrelugar')
-					@la_input($module, 'municipio')
+					@la_input($module, 'nombreLugar')
 					--}}
                     <br>
 					<div class="form-group">

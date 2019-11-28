@@ -22,8 +22,8 @@ use App\Models\Categoria;
 class CategoriasController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'tipocategoria';
-	public $listing_cols = ['id', 'nombreCat', 'tipocategoria', 'producto'];
+	public $view_col = 'marca';
+	public $listing_cols = ['id', 'nombreCat', 'marca'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

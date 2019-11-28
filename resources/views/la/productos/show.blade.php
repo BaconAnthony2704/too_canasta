@@ -107,11 +107,11 @@
 						<h4>General Info</h4>
 					</div>
 					<div class="panel-body">
-						@la_display($module, 'NmbreProducto')
-						@la_display($module, 'cantidad')
+						@la_display($module, 'nombreProducto')
+						@la_display($module, 'precioProducto')
+						@la_display($module, 'precio')
+						@la_display($module, 'cantidadProducto')
 						@la_display($module, 'unidadmedida')
-						@la_display($module, 'departamento')
-						@la_display($module, 'marca')
 					</div>
 				</div>
 			</div>

@@ -107,8 +107,8 @@
 						<h4>General Info</h4>
 					</div>
 					<div class="panel-body">
-						@la_display($module, 'nombremarca')
-						@la_display($module, 'precio')
+						@la_display($module, 'nombreMarca')
+						@la_display($module, 'producto')
 					</div>
 				</div>
 			</div>

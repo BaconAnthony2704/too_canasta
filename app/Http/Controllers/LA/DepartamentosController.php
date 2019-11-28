@@ -22,8 +22,8 @@ use App\Models\Departamento;
 class DepartamentosController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'nombreDepto';
-	public $listing_cols = ['id', 'nombreDepto'];
+	public $view_col = 'municipio';
+	public $listing_cols = ['id', 'municipio', 'nombreDepto'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

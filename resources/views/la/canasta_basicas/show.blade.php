@@ -1,7 +1,7 @@
 @extends('la.layouts.app')
 
 @section('htmlheader_title')
-	Canasta basica View
+	Canasta Basica View
 @endsection
 
 
@@ -81,11 +81,11 @@
 			</div>
 		</div>
 		<div class="col-md-1 actions">
-			@la_access("Canasta_basicas", "edit")
+			@la_access("Canasta_Basicas", "edit")
 				<a href="{{ url(config('laraadmin.adminRoute') . '/canasta_basicas/'.$canasta_basica->id.'/edit') }}" class="btn btn-xs btn-edit btn-default"><i class="fa fa-pencil"></i></a><br>
 			@endla_access
 			
-			@la_access("Canasta_basicas", "delete")
+			@la_access("Canasta_Basicas", "delete")
 				{{ Form::open(['route' => [config('laraadmin.adminRoute') . '.canasta_basicas.destroy', $canasta_basica->id], 'method' => 'delete', 'style'=>'display:inline']) }}
 					<button class="btn btn-default btn-delete btn-xs" type="submit"><i class="fa fa-times"></i></button>
 				{{ Form::close() }}
@@ -94,7 +94,7 @@
 	</div>
 
 	<ul data-toggle="ajax-tab" class="nav nav-tabs profile" role="tablist">
-		<li class=""><a href="{{ url(config('laraadmin.adminRoute') . '/canasta_basicas') }}" data-toggle="tooltip" data-placement="right" title="Back to Canasta basicas"><i class="fa fa-chevron-left"></i></a></li>
+		<li class=""><a href="{{ url(config('laraadmin.adminRoute') . '/canasta_basicas') }}" data-toggle="tooltip" data-placement="right" title="Back to Canasta Basicas"><i class="fa fa-chevron-left"></i></a></li>
 		<li class="active"><a role="tab" data-toggle="tab" class="active" href="#tab-general-info" data-target="#tab-info"><i class="fa fa-bars"></i> General Info</a></li>
 		<li class=""><a role="tab" data-toggle="tab" href="#tab-timeline" data-target="#tab-timeline"><i class="fa fa-clock-o"></i> Timeline</a></li>
 	</ul>
@@ -107,10 +107,7 @@
 						<h4>General Info</h4>
 					</div>
 					<div class="panel-body">
-						@la_display($module, 'pais')
-						@la_display($module, 'fecha')
-						@la_display($module, 'departamento')
-						@la_display($module, 'categoria')
+						@la_display($module, 'nombreCanasta')
 					</div>
 				</div>
 			</div>

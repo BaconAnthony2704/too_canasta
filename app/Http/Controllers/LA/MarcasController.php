@@ -22,8 +22,8 @@ use App\Models\Marca;
 class MarcasController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'nombremarca';
-	public $listing_cols = ['id', 'nombremarca', 'precio'];
+	public $view_col = 'producto';
+	public $listing_cols = ['id', 'nombreMarca', 'producto'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

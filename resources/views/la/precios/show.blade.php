@@ -108,9 +108,9 @@
 					</div>
 					<div class="panel-body">
 						@la_display($module, 'mayor')
-						@la_display($module, 'descuento')
-						@la_display($module, 'normal')
 						@la_display($module, 'menor')
+						@la_display($module, 'normal')
+						@la_display($module, 'descuento')
 					</div>
 				</div>
 			</div>

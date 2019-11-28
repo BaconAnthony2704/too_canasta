@@ -107,8 +107,7 @@
 						<h4>General Info</h4>
 					</div>
 					<div class="panel-body">
-						@la_display($module, 'nombrelugar')
-						@la_display($module, 'municipio')
+						@la_display($module, 'nombreLugar')
 					</div>
 				</div>
 			</div>

@@ -17,34 +17,34 @@ use Collective\Html\FormFacade as Form;
 use Dwij\Laraadmin\Models\Module;
 use Dwij\Laraadmin\Models\ModuleFields;
 
-use App\Models\Canasta_basica;
+use App\Models\Canasta_Basica;
 
-class Canasta_basicasController extends Controller
+class Canasta_BasicasController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'pais';
-	public $listing_cols = ['id', 'pais', 'fecha', 'departamento', 'categoria'];
+	public $view_col = 'nombreCanasta';
+	public $listing_cols = ['id', 'nombreCanasta'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns
 		if(\Dwij\Laraadmin\Helpers\LAHelper::laravel_ver() == 5.3) {
 			$this->middleware(function ($request, $next) {
-				$this->listing_cols = ModuleFields::listingColumnAccessScan('Canasta_basicas', $this->listing_cols);
+				$this->listing_cols = ModuleFields::listingColumnAccessScan('Canasta_Basicas', $this->listing_cols);
 				return $next($request);
 			});
 		} else {
-			$this->listing_cols = ModuleFields::listingColumnAccessScan('Canasta_basicas', $this->listing_cols);
+			$this->listing_cols = ModuleFields::listingColumnAccessScan('Canasta_Basicas', $this->listing_cols);
 		}
 	}
 	
 	/**
-	 * Display a listing of the Canasta_basicas.
+	 * Display a listing of the Canasta_Basicas.
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index()
 	{
-		$module = Module::get('Canasta_basicas');
+		$module = Module::get('Canasta_Basicas');
 		
 		if(Module::hasAccess($module->id)) {
 			return View('la.canasta_basicas.index', [
@@ -75,9 +75,9 @@ class Canasta_basicasController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		if(Module::hasAccess("Canasta_basicas", "create")) {
+		if(Module::hasAccess("Canasta_Basicas", "create")) {
 		
-			$rules = Module::validateRules("Canasta_basicas", $request);
+			$rules = Module::validateRules("Canasta_Basicas", $request);
 			
 			$validator = Validator::make($request->all(), $rules);
 			
@@ -85,7 +85,7 @@ class Canasta_basicasController extends Controller
 				return redirect()->back()->withErrors($validator)->withInput();
 			}
 			
-			$insert_id = Module::insert("Canasta_basicas", $request);
+			$insert_id = Module::insert("Canasta_Basicas", $request);
 			
 			return redirect()->route(config('laraadmin.adminRoute') . '.canasta_basicas.index');
 			
@@ -102,11 +102,11 @@ class Canasta_basicasController extends Controller
 	 */
 	public function show($id)
 	{
-		if(Module::hasAccess("Canasta_basicas", "view")) {
+		if(Module::hasAccess("Canasta_Basicas", "view")) {
 			
-			$canasta_basica = Canasta_basica::find($id);
+			$canasta_basica = Canasta_Basica::find($id);
 			if(isset($canasta_basica->id)) {
-				$module = Module::get('Canasta_basicas');
+				$module = Module::get('Canasta_Basicas');
 				$module->row = $canasta_basica;
 				
 				return view('la.canasta_basicas.show', [
@@ -134,10 +134,10 @@ class Canasta_basicasController extends Controller
 	 */
 	public function edit($id)
 	{
-		if(Module::hasAccess("Canasta_basicas", "edit")) {			
-			$canasta_basica = Canasta_basica::find($id);
+		if(Module::hasAccess("Canasta_Basicas", "edit")) {			
+			$canasta_basica = Canasta_Basica::find($id);
 			if(isset($canasta_basica->id)) {	
-				$module = Module::get('Canasta_basicas');
+				$module = Module::get('Canasta_Basicas');
 				
 				$module->row = $canasta_basica;
 				
@@ -165,9 +165,9 @@ class Canasta_basicasController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-		if(Module::hasAccess("Canasta_basicas", "edit")) {
+		if(Module::hasAccess("Canasta_Basicas", "edit")) {
 			
-			$rules = Module::validateRules("Canasta_basicas", $request, true);
+			$rules = Module::validateRules("Canasta_Basicas", $request, true);
 			
 			$validator = Validator::make($request->all(), $rules);
 			
@@ -175,7 +175,7 @@ class Canasta_basicasController extends Controller
 				return redirect()->back()->withErrors($validator)->withInput();;
 			}
 			
-			$insert_id = Module::updateRow("Canasta_basicas", $request, $id);
+			$insert_id = Module::updateRow("Canasta_Basicas", $request, $id);
 			
 			return redirect()->route(config('laraadmin.adminRoute') . '.canasta_basicas.index');
 			
@@ -192,8 +192,8 @@ class Canasta_basicasController extends Controller
 	 */
 	public function destroy($id)
 	{
-		if(Module::hasAccess("Canasta_basicas", "delete")) {
-			Canasta_basica::find($id)->delete();
+		if(Module::hasAccess("Canasta_Basicas", "delete")) {
+			Canasta_Basica::find($id)->delete();
 			
 			// Redirecting to index() method
 			return redirect()->route(config('laraadmin.adminRoute') . '.canasta_basicas.index');
@@ -213,7 +213,7 @@ class Canasta_basicasController extends Controller
 		$out = Datatables::of($values)->make();
 		$data = $out->getData();
 
-		$fields_popup = ModuleFields::getModuleFields('Canasta_basicas');
+		$fields_popup = ModuleFields::getModuleFields('Canasta_Basicas');
 		
 		for($i=0; $i < count($data->data); $i++) {
 			for ($j=0; $j < count($this->listing_cols); $j++) { 
@@ -231,11 +231,11 @@ class Canasta_basicasController extends Controller
 			
 			if($this->show_action) {
 				$output = '';
-				if(Module::hasAccess("Canasta_basicas", "edit")) {
+				if(Module::hasAccess("Canasta_Basicas", "edit")) {
 					$output .= '<a href="'.url(config('laraadmin.adminRoute') . '/canasta_basicas/'.$data->data[$i][0].'/edit').'" class="btn btn-warning btn-xs" style="display:inline;padding:2px 5px 3px 5px;"><i class="fa fa-edit"></i></a>';
 				}
 				
-				if(Module::hasAccess("Canasta_basicas", "delete")) {
+				if(Module::hasAccess("Canasta_Basicas", "delete")) {
 					$output .= Form::open(['route' => [config('laraadmin.adminRoute') . '.canasta_basicas.destroy', $data->data[$i][0]], 'method' => 'delete', 'style'=>'display:inline']);
 					$output .= ' <button class="btn btn-danger btn-xs" type="submit"><i class="fa fa-times"></i></button>';
 					$output .= Form::close();

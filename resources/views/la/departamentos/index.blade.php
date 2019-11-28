@@ -59,6 +59,7 @@
                     @la_form($module)
 					
 					{{--
+					@la_input($module, 'municipio')
 					@la_input($module, 'nombreDepto')
 					--}}
 				</div>

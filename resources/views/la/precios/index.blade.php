@@ -60,9 +60,9 @@
 					
 					{{--
 					@la_input($module, 'mayor')
-					@la_input($module, 'descuento')
-					@la_input($module, 'normal')
 					@la_input($module, 'menor')
+					@la_input($module, 'normal')
+					@la_input($module, 'descuento')
 					--}}
 				</div>
 			</div>
